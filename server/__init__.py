@@ -8,7 +8,7 @@ def create_app():
 
     # Initialize the core application
     app = Flask(__name__, static_folder="../myfinapp-react-v1.4/build", static_url_path="")
-    app.config.from_object('server.config.DevelopmentConfig')
+    app.config.from_object('server.config.ProductionConfig')
 
     # initialize plugins
     cors.init_app(app)
