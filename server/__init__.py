@@ -13,12 +13,14 @@ def create_app():
     # initialize plugins
     cors.init_app(app)
 
+    #change
+
     with app.app_context():
 
         #import routes and models
         from .a_core import core
 
         #Register blueprints
-        app.register_blueprint(core.core_bp)
+        app.register_blueprint(core.core_bp) 
 
     return app
